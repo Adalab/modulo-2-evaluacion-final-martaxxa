@@ -178,7 +178,7 @@ const allCharacters = [
       sourceUrl: "https://disney.fandom.com/wiki/Irwina_Allen",
       name: "Irwina Allen",
       imageUrl:
-        "https://static.wikia.nocookie.net/disney/images/4/48/Chip_%27n_Dale_Rescue_Rangers_109_Risky_Beesness_arsenaloyal_-_YouTube12.jpg",
+        "https://via.placeholder.com/210x295/%EF%AC%80%EF%AC%80%EF%AC%80/555555/?text=Disney",
       createdAt: "2021-04-12T01:32:15.300Z",
       updatedAt: "2021-12-20T20:39:18.877Z",
       url: "https://api.disneyapi.dev/characters/181",
@@ -231,6 +231,7 @@ const allCharacters = [
       enemies: [],
       sourceUrl: "https://disney.fandom.com/wiki/Arabella",
       name: "Arabella",
+      imageUrl: "https://via.placeholder.com/210x295/%EF%AC%80%EF%AC%80%EF%AC%80/555555/?text=Disney",
       createdAt: "2021-04-12T01:33:24.447Z",
       updatedAt: "2021-04-12T01:33:24.447Z",
       url: "https://api.disneyapi.dev/characters/293",
@@ -320,7 +321,7 @@ const allCharacters = [
       sourceUrl: "https://disney.fandom.com/wiki/Ashcan_and_Pete",
       name: "Ashcan and Pete",
       imageUrl:
-        "https://static.wikia.nocookie.net/disney/images/8/88/AshcanPete.PNG",
+        "https://via.placeholder.com/210x295/%EF%AC%80%EF%AC%80%EF%AC%80/555555/?text=Disney",
       createdAt: "2021-04-12T01:33:52.329Z",
       updatedAt: "2021-12-20T20:39:20.363Z",
       url: "https://api.disneyapi.dev/characters/337",
@@ -771,6 +772,7 @@ const allCharacters = [
       enemies: [],
       sourceUrl: "https://disney.fandom.com/wiki/Amelia_Duckworth",
       name: "Amelia Duckworth",
+      imageUrl: "https://via.placeholder.com/210x295/%EF%AC%80%EF%AC%80%EF%AC%80/555555/?text=Disney",
       createdAt: "2021-04-12T01:32:30.828Z",
       updatedAt: "2021-04-12T01:32:30.828Z",
       url: "https://api.disneyapi.dev/characters/207",
@@ -842,7 +844,7 @@ const allCharacters = [
       sourceUrl: "https://disney.fandom.com/wiki/Anthony_Biddle",
       name: "Anthony Biddle",
       imageUrl:
-        "https://static.wikia.nocookie.net/disney/images/6/64/Images_%2812%29-0.jpg",
+        "https://via.placeholder.com/210x295/%EF%AC%80%EF%AC%80%EF%AC%80/555555/?text=Disney",
       createdAt: "2021-04-12T01:33:08.833Z",
       updatedAt: "2021-12-20T20:39:19.913Z",
       url: "https://api.disneyapi.dev/characters/268",

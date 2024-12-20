@@ -1,0 +1,31 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+       color: blueviolet;
+    }
+
+    &__subtitle {
+        font-style: italic;
+    }
+}
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 20px;
+    
+    &__cards {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        top: 0;
+        overflow: hidden;
+        position: relative;
+        gap: 20px;
+    }
+}
