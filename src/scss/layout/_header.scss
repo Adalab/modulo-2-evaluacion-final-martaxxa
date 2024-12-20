@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/disney-castle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40% 60%;
+    height: 300px;
+    
+
+    &__title {
+        font-family: $fontfamily-name-header;
+        font-size: $fontsize-name-header;
+        font-weight: $fontweight-name-header;
+        color: white;
+        text-align: center;
+        text-shadow: 5px 5px 5px black;
+    }
+}

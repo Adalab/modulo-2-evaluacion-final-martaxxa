@@ -1,0 +1,29 @@
+.search {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    gap: 10px;
+    border: solid 20px;
+    border-color: white;
+    margin: 0 auto;
+    position: relative;
+    bottom: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 10px grey;
+
+
+    &__input {
+        width: 500px;
+        height: 40px;
+        padding: 5px 5px 5px 10px;
+        border: solid 4px;
+        border-color: blueviolet;
+    }
+
+    &__btn {
+        width: 70px;
+        background-color: blueviolet;
+        color: white;
+        border: none;
+    }
+}
