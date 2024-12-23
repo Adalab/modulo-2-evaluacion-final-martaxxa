@@ -774,7 +774,7 @@ let allCharacters = [
       enemies: [],
       sourceUrl: "https://disney.fandom.com/wiki/Amelia_Duckworth",
       name: "Amelia Duckworth",
-      imageUrl: "https://via.placeholder.com/210x295/%EF%AC%80%EF%AC%80%EF%AC%80/555555/?text=Disney",
+      imageUrl: "https://via.placeholder.com/210x295/ffffff/555555/?text=Disney",
       createdAt: "2021-04-12T01:32:30.828Z",
       updatedAt: "2021-04-12T01:32:30.828Z",
       url: "https://api.disneyapi.dev/characters/207",
@@ -975,9 +975,9 @@ let allCharacters = [
 
 const renderOneCharacter = (characterObj) => {
     const html = `
-        <li>
-            <h4>${characterObj.name}</h4>
-            <img src="${characterObj.imageUrl}">
+        <li class="characters__item">
+            <img class="characters__img" src="${characterObj.imageUrl}">
+            <h4 class="characters__name">${characterObj.name}</h4>
         </li>`;
 
     return html;

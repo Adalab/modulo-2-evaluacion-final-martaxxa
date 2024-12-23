@@ -14,20 +14,70 @@
     }
 }
 
-.characters {
+.principal {
     display: flex;
-    padding: 20px;
-    
-    &__cards {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        top: 0;
-        overflow: hidden;
-        gap: 20px;
-    }
+    height: 100vh;
 }
 
 .favourites {
-    background-color: lightpink;
+    width: 300px;
+    background-color: #f9f9f9;
+    border-right: 2px solid #ddd; 
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    overflow-y: auto; 
+
+    &__cards {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+} 
+
+.content {
+    flex: 1;
+    padding: 20px;
 }
+
+.characters {
+    margin-top: 20px;
+    
+    &__cards {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        overflow: hidden;
+        list-style: none;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    &__cards li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: white;
+        order-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    &__item {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    &__img {
+        width: 200px;
+        height: 200px;
+    }
+
+    &__name {
+        padding: 10px;
+        color: rgb(53, 52, 52);
+    }
+}
+
