@@ -15,8 +15,7 @@
 }
 
 .characters {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
     padding: 20px;
     
     &__cards {
@@ -25,7 +24,10 @@
         align-items: center;
         top: 0;
         overflow: hidden;
-        position: relative;
         gap: 20px;
     }
+}
+
+.favourites {
+    background-color: lightpink;
 }

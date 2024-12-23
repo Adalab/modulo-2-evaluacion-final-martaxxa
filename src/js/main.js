@@ -1,8 +1,10 @@
 'use strict';
 
-const characterOne = document.querySelector('.js_characterOne');
+const characterUl = document.querySelector('.js_characterUl');
+const inputSearch = document.querySelector('.js_inputSearch');
+const btnSearch = document.querySelector('.js_btnSearch');
 
-const allCharacters = [
+let allCharacters = [
     {
       _id: 112,
       films: ["Hercules (film)"],
@@ -972,13 +974,46 @@ const allCharacters = [
   ];
 
 const renderOneCharacter = (characterObj) => {
-    characterOne.innerHTML += `
+    const html = `
         <li>
             <h4>${characterObj.name}</h4>
             <img src="${characterObj.imageUrl}">
         </li>`;
+
+    return html;
 };
 
-for (const characterObj of allCharacters){
-    renderOneCharacter (characterObj);
+const renderAllCharacters = () => {
+  let html = '';
+  
+  for (const characterObj of allCharacters){
+      html += renderOneCharacter(characterObj);
+  }
+  characterUl.innerHTML = html;
 }
+
+fetch('https://api.disneyapi.dev/character?pageSize=50')
+  .then((response) => response.json())
+  .then((data) => {
+    allCharacters = data.data;
+
+    renderAllCharacters();
+  });
+
+
+
+
+
+
+
+
+
+/*const handleInputSearch = () => {
+  const filterText = inputSearch.value.toLowerCase();
+  const filteredCharacter = allCharacters.filter(characterObj => characterObj.name.toLowerCase().includes(filterText));
+  renderOneCharacter(filteredCharacter);
+};
+
+btnSearch.addEventListener('click' , handleInputSearch => {
+  handleInputSearch.preventDefault();
+});*/
