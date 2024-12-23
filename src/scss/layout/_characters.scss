@@ -21,16 +21,18 @@
 
 .favourites {
     width: 300px;
+    height: 2870px;
     background-color: #f9f9f9;
     border-right: 2px solid #ddd; 
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-    overflow-y: auto; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
 
     &__cards {
         list-style: none;
-        padding: 0px;
+        padding: 20px;
         margin: 0px;
+
     }
 } 
 
@@ -45,7 +47,7 @@
     &__cards {
         list-style: none;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         justify-content: center;
         align-items: center;
         top: 0;

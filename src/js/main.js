@@ -3,6 +3,7 @@
 const characterUl = document.querySelector('.js_characterUl');
 const inputSearch = document.querySelector('.js_inputSearch');
 const btnSearch = document.querySelector('.js_btnSearch');
+const favouritesUl = document.querySelector('.js_favouritesUl');
 
 let allCharacters = [
     {
@@ -975,7 +976,7 @@ let allCharacters = [
 
 const renderOneCharacter = (characterObj) => {
     const html = `
-        <li class="js_character characters__item">
+        <li class="js_character characters__item" id="${characterObj._id}">
             <img class="characters__img" src="${characterObj.imageUrl}">
             <h4 class="characters__name">${characterObj.name}</h4>
         </li>`;
@@ -1000,6 +1001,15 @@ const renderAllCharacters = () => {
 
 const handleTheBest = (ev) => {
   ev.currentTarget.classList.toggle('thebest');
+
+  const clickedId = parseInt(ev.currentTarget.id, 10);
+
+  const clickedCharacterObj = allCharacters.find((eachCharacter) => eachCharacter._id === clickedId);
+
+  const liFavourite = renderOneCharacter(clickedCharacterObj);
+  
+  favouritesUl.innerHTML = liFavourite;
+
 }
 
 fetch('https://api.disneyapi.dev/character?pageSize=50')
@@ -1009,21 +1019,3 @@ fetch('https://api.disneyapi.dev/character?pageSize=50')
 
     renderAllCharacters();
   });
-
-
-
-
-
-
-
-
-
-/*const handleInputSearch = () => {
-  const filterText = inputSearch.value.toLowerCase();
-  const filteredCharacter = allCharacters.filter(characterObj => characterObj.name.toLowerCase().includes(filterText));
-  renderOneCharacter(filteredCharacter);
-};
-
-btnSearch.addEventListener('click' , handleInputSearch => {
-  handleInputSearch.preventDefault();
-});*/
