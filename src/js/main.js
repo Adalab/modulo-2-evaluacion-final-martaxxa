@@ -975,7 +975,7 @@ let allCharacters = [
 
 const renderOneCharacter = (characterObj) => {
     const html = `
-        <li class="characters__item">
+        <li class="js_character characters__item">
             <img class="characters__img" src="${characterObj.imageUrl}">
             <h4 class="characters__name">${characterObj.name}</h4>
         </li>`;
@@ -990,6 +990,16 @@ const renderAllCharacters = () => {
       html += renderOneCharacter(characterObj);
   }
   characterUl.innerHTML = html;
+
+  const allCharactersLi = document.querySelectorAll('.js_character');
+
+  for (const li of allCharactersLi){
+    li.addEventListener('click', handleTheBest);
+  }
+}
+
+const handleTheBest = (ev) => {
+  ev.currentTarget.classList.toggle('thebest');
 }
 
 fetch('https://api.disneyapi.dev/character?pageSize=50')
