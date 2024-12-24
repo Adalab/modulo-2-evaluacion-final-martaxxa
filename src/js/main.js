@@ -58,9 +58,10 @@ const handleTheBest = (ev) => {
   }
   else {
     favourites.splice(favouritesIdx, 1);
-
     renderFavourites();
   }
+
+  localStorage.setItem('charactersTheBest', JSON.stringify(favourites));
 }
 
 fetch('https://api.disneyapi.dev/character?pageSize=50')
@@ -70,3 +71,8 @@ fetch('https://api.disneyapi.dev/character?pageSize=50')
 
     renderAllCharacters();
   });
+
+if (localStorage.getItem('charactersTheBest') !== null){
+  favourites = JSON.parse(localStorage.getItem ('charactersTheBest'))
+  renderFavourites();
+}
