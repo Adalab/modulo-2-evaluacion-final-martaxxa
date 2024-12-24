@@ -64,6 +64,25 @@ const handleTheBest = (ev) => {
   localStorage.setItem('charactersTheBest', JSON.stringify(favourites));
 }
 
+/*const handleSearch = () => {
+  const searchText = inputSearch.value.toLowerCase();
+
+  const filteredCharacters = allCharacters.filter(character => character.name.includes(searchText));
+
+  let html = '';
+  for (const characterObj of filteredCharacters){
+    html += renderOneCharacter(characterObj);
+  }
+  characterUl.innerHTML = html;
+
+  const allCharactersLi = document.querySelectorAll('.js_character');
+  for (const li of allCharactersLi) {
+    li.addEventListener('click' , handleSearch);
+  }
+};*/
+
+//btnSearch.addEventListener('click' , handleSearch);
+
 fetch('https://api.disneyapi.dev/character?pageSize=50')
   .then((response) => response.json())
   .then((data) => {
