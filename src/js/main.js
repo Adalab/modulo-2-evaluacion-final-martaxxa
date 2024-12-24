@@ -64,24 +64,30 @@ const handleTheBest = (ev) => {
   localStorage.setItem('charactersTheBest', JSON.stringify(favourites));
 }
 
-/*const handleSearch = () => {
-  const searchText = inputSearch.value.toLowerCase();
+const renderfilteredCharacter = (filterText) => {
+  const apiUrl = `https://api.disneyapi.dev/character?pageSize=50&name=${encodeURIComponent(filterText)}`;
 
-  const filteredCharacters = allCharacters.filter(character => character.name.includes(searchText));
+  fetch(apiUrl)
+  .then((response) => response.json())
+  .then((data) => {
+    allCharacters = data.data;
+    renderAllCharacters(allCharacters);
+  })
+};
 
-  let html = '';
-  for (const characterObj of filteredCharacters){
-    html += renderOneCharacter(characterObj);
+const handleBtnSearch = (ev) => {
+  ev.preventDefault();
+
+  const filterText = inputSearch.value.toLowerCase().trim();
+  if(filterText !== '') {
+    renderfilteredCharacter(filterText);
   }
-  characterUl.innerHTML = html;
-
-  const allCharactersLi = document.querySelectorAll('.js_character');
-  for (const li of allCharactersLi) {
-    li.addEventListener('click' , handleSearch);
+  else {
+    renderAllCharacters();
   }
-};*/
+};
 
-//btnSearch.addEventListener('click' , handleSearch);
+btnSearch.addEventListener('click', handleBtnSearch);
 
 fetch('https://api.disneyapi.dev/character?pageSize=50')
   .then((response) => response.json())
@@ -94,4 +100,4 @@ fetch('https://api.disneyapi.dev/character?pageSize=50')
 if (localStorage.getItem('charactersTheBest') !== null){
   favourites = JSON.parse(localStorage.getItem ('charactersTheBest'))
   renderFavourites();
-}
+};
