@@ -5,3 +5,6 @@
 <p>Si se arrepiente de haber escogido a un personaje, puede deshacer la acción :)</p>
 <p>Y si se lía entre tantos, puede directamente buscar uno en concreto ayudándose de la barra de busqueda que filtra por palabra.</p>
 <p>¡Todo son facilidades!</p>
+
+<h3>Detalles</h3>
+<p>Para la maquetación hemos usado el Starter Kit de Adalab y las funcionalidades de SASS.</p>
