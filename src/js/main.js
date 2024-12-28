@@ -19,8 +19,6 @@ const renderOneCharacter = (characterObj) => {
       imageUrl = `https://via.placeholder.com/210x295/ffffff/555555/?text=Disney`;
     }
 
-    console.log(imageUrl);
-
     const html = `
         <li class="js_character characters__item" id="${characterObj._id}">
             <img class="characters__img" src="${imageUrl}" alt="${characterObj.name}" 
