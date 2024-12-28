@@ -11,3 +11,5 @@
 
 <h2>Mira el proyecto terminado aquí:</h2>
 <p>https://beta.adalab.es/modulo-2-evaluacion-final-martaxxa/</p>
+
+<p>Puede que tarde un par de segundos en cargarse toda la información de la API. Intentaremos arreglarlo pronto, mientras tanto, te agradecemos tu paciencia :)</p>
