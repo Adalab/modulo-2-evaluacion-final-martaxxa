@@ -10,9 +10,21 @@ let favourites = [];
 
 
 const renderOneCharacter = (characterObj) => {
+    let imageUrl;
+
+    if (characterObj.imageUrl){
+      imageUrl = characterObj.imageUrl;
+    }
+    else {
+      imageUrl = `https://via.placeholder.com/210x295/ffffff/555555/?text=Disney`;
+    }
+
+    console.log(imageUrl);
+
     const html = `
         <li class="js_character characters__item" id="${characterObj._id}">
-            <img class="characters__img" src="${characterObj.imageUrl}">
+            <img class="characters__img" src="${imageUrl}" alt="${characterObj.name}" 
+                 onerror="this.src='https://via.placeholder.com/210x295/ffffff/555555/?text=Disney'">
             <h4 class="characters__name">${characterObj.name}</h4>
         </li>`;
 
