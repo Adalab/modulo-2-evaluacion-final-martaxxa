@@ -8,3 +8,6 @@
 
 <h3>Detalles</h3>
 <p>Para la maquetación hemos usado el Starter Kit de Adalab y las funcionalidades de SASS.</p>
+
+<h2>Mira el proyecto terminado aquí:</h2>
+<p>https://beta.adalab.es/modulo-2-evaluacion-final-martaxxa/</p>
